@@ -13,7 +13,8 @@ function getValue(myVal: number): boolean {
   if (myVal > 5) {
     return true;
   }
-  return "200 Ok";
+  return false;
+  //   return "200 Ok";
   // you have more then one type to declare
 }
 
