@@ -4,12 +4,12 @@ let tUser: [string, number, boolean];
 tUser = ["nm", 34, true];
 
 //here you can put only int of number no coma
-let rgb: [number, number, number] = [255, 2324, 346, 6.757];
+let rgb: [number, number, number] = [255, 2324, 346]; //6.757];
 
-type User = [number, string];
+type bUser = [number, string];
 
-const newUser: User = [112, "kajgkhgkhf"];
+const newUser: bUser = [112, "kajgkhgkhf"];
 
 //carful cause you can always change your value
 newUser[1] = "asga";
-newUser.push(true);
+// newUser.push(true)
