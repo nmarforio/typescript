@@ -25,3 +25,48 @@ interface Bootle {
 }
 
 identityFour<Bootle>({ brand: "cola", type: 3 });
+
+function getSearchProducts<T>(products: T[]): T {
+  // the return value has to be one of the value inside the array
+  const myIndex = 3;
+  return products[myIndex];
+}
+
+const getMore = <T>(products: T[]): T => {
+  const myIndexs = 4;
+  return products[myIndexs];
+};
+
+interface DataBase {
+  connection: string;
+  username: string;
+  password: string;
+}
+
+function genericFunction<T, U extends DataBase>(
+  valueOne: T,
+  valueTow: U
+): object {
+  return { valueOne, valueTow };
+}
+// you can also do <T, dataBase>(valueTow: database)
+
+genericFunction(3, { connection: "s", username: "d", password: "e" });
+
+interface QUIZ {
+  name: string;
+  type: string;
+}
+interface Course {
+  name: string;
+  author: string;
+  subject: string;
+}
+
+class Sale<T> {
+  public cart: T[] = [];
+
+  addToCart(product: T) {
+    this.cart.push(product);
+  }
+}
